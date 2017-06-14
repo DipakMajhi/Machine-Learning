@@ -12,7 +12,7 @@
 
 Investment firms, hedge funds, and automated trading systems have used programming and advanced modeling to interact with and profit from the stock market since computerization of the exchanges in the 1970s. Whether by means of better analysis, signal identification, or automating the frequency of trades, the goal has been to leverage technology in order create investment systems that outperform alternatives. 
 
-I wanted to use my Machine Learning knowledge to solve a real problem. Since, I have always been interested in investment and trading, I chosen to work under the domain “Investment and Trading” for my Capstone project and Build a Stock Price Indicator to see if it could help in predicting stock prices in the short-term future. For this Capstone Project, I took help from Udacity’s courses – “Machine learning for Trading” by Georgia Tech and  “Time Series Forecasting”. 
+I wanted to use my Machine Learning knowledge to solve a real problem. Since, I have always been interested in investment and trading, I chosen to work under the domain “Investment and Trading” for my Capstone project and Build a Stock Price Indicator to see if it could help in predicting stock prices in the short-term future. For this Capstone Project, I took help from Udacity’s courses – [“Machine learning for Trading”](https://www.udacity.com/course/machine-learning-for-trading--ud501) by Georgia Tech and  [“Time Series Forecasting”](https://www.udacity.com/course/time-series-forecasting--ud980). 
 
 
 
@@ -20,15 +20,15 @@ I wanted to use my Machine Learning knowledge to solve a real problem. Since, I 
 
 Build machine learning models that learn from historical stock price attributes and predict the stock price on a future date (any day after the last training date), I am only predicting the future Adjusted Closing pricing. Since the target variable is a continuous value so this is a regression task. 
 
-Building few models such as Linear Regression, KNN Regression, ARIMA which learn from historical stock data, attributes such as: Open, High, Low, Close, Volume, Adjusted Closing and “Adjusted Closing price” n days ahead in future. 
+Building few models such as [Linear Regression](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html), [KNN Regression](http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsRegressor.html), [ARIMA](http://www.statsmodels.org/dev/generated/statsmodels.tsa.arima_model.ARIMA.html) which learn from historical stock data, attributes such as: Open, High, Low, Close, Volume, Adjusted Closing and “Adjusted Closing price” n days ahead in future. 
 
 
 
 ## Datasets and Inputs:
 
-I have downloaded daily historical stocks data from Yahoo Finance [link] between 12-05-2011 and 12-02-2016 for the following stocks along with SNP_500(American Market index, I want to see how these stock trend with respect to market trends explained by SNP_500).  ‘FACEBOOK’ went public around mid of 2012, so we don’t have data for ‘FACEBOOK’ prior to that. 
+I have downloaded daily historical stocks data from Yahoo Finance [link](http://finance.yahoo.com/) between 12-05-2011 and 12-02-2016 for the following stocks along with SNP_500(American Market index, I want to see how these stock trend with respect to market trends explained by SNP_500).  ‘FACEBOOK’ went public around mid of 2012, so we don’t have data for ‘FACEBOOK’ prior to that. 
 
-The following stocks are considered: [link]
+The following stocks are considered: [link](https://github.com/DipakMajhi/Machine-Learning/tree/master/Predicting-Stock-Prices/Datasets)
 
 'GOOGLE', 'AMAZON', 'GOLD', 'APPLE', 'FACEBOOK', 'MICROSOFT', 'GENERAL ELECTRIC'
 
@@ -93,9 +93,9 @@ The benchmark scores for the models: R2 Score of 0.6 on test data (unseen data) 
 
 ## Evaluation Metrics:
 
-R2 score [link] on the train and test datasets are calculated to measure the performance of the model. Best possible score is 1. Besides R2 score, I am also calculating the variation of the predicted stock price compared to the actual prices in the test dataset. R2 Score is used to test the performance of all three models – Linear Regression [link], KNN Regression [link] and ARIMA [link]
+R2 score [link](http://scikit-learn.org/stable/modules/generated/sklearn.metrics.r2_score.html) on the train and test datasets are calculated to measure the performance of the model. Best possible score is 1. Besides R2 score, I am also calculating the variation of the predicted stock price compared to the actual prices in the test dataset. R2 Score is used to test the performance of all three models – Linear Regression, KNN Regression and ARIMA.
 
-In statistics, the coefficient of determination [link], denoted R2 or r2 and pronounced "R squared", is a number that indicates the proportion of the variance in the dependent variable that is predictable from the independent variable. The coefficient R^2 is defined as (1 - u/v), where u is the regression sum of squares ((y_true - y_pred) ** 2). sum () and v is the residual sum of squares ((y_true - y_true. mean ()) ** 2). sum (). 
+In statistics, the coefficient of determination [link](https://en.wikipedia.org/wiki/Coefficient_of_determination), denoted R2 or r2 and pronounced "R squared", is a number that indicates the proportion of the variance in the dependent variable that is predictable from the independent variable. The coefficient R^2 is defined as (1 - u/v), where u is the regression sum of squares ((y_true - y_pred) ** 2). sum () and v is the residual sum of squares ((y_true - y_true. mean ()) ** 2). sum (). 
 Best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of y, disregarding the input features, would get a R^2 score of 0.0.
 
 
